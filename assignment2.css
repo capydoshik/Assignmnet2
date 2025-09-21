@@ -17,6 +17,7 @@ body {
     background-attachment: fixed;   
 }
 
+
 header {
     display: flex;
     justify-content: space-between;
@@ -28,12 +29,14 @@ header {
     top: 0;
 }
 
+
 .logo {
     font-family: Arial, sans-serif;
     font-size: 24px;
     font-weight: bold;
     color: #ffffff;
 }
+
 
 nav a {
     text-decoration: none;
@@ -46,6 +49,7 @@ nav a {
 nav a:hover {
     color: #bbbbbb;
 }
+
 
 main {
     max-width: 900px;
@@ -64,3 +68,19 @@ main p {
     margin-bottom: 20px;
     color: #dddddd;
 }
+
+
+footer {
+    background-color: #2F3234;
+    border-top: 1px solid #444;
+    padding: 10px 60px;
+    text-align: left;
+    color: #bbbbbb;
+    font-size: 12px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+

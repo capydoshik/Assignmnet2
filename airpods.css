@@ -95,3 +95,16 @@ main p {
 }
 
 
+footer {
+    background-color: #2F3234;
+    border-top: 1px solid #444;
+    padding: 0px 60px;
+    text-align: left;
+    color: #bbbbbb;
+    font-size: 12px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
