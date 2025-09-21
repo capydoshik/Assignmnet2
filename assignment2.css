@@ -1,50 +1,22 @@
-/* Сброс стилей */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Общие стили для body */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #ffffff;
-
-    /* фон */
-    background-color: #2F3234; /* запасной цвет */
+    background-color: #2F3234;
     background-image: url('https://bluescreen.kz/content/images/2024/06/overview__bcphzsdb4fpu_og.png');
-    background-size: contain;       /* картинка целиком */
-    background-repeat: no-repeat;   /* без повторов */
-    background-position: bottom center 50%; /* всегда внизу */
-    background-attachment: fixed;   /* при скролле фиксируется */
+    background-size: contain;     
+    background-repeat: no-repeat;  
+    background-position: bottom center 50%; 
+    background-attachment: fixed;   
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Шапка */
 header {
     display: flex;
     justify-content: space-between;
@@ -57,12 +29,12 @@ header {
 }
 
 .logo {
+    font-family: Arial, sans-serif;
     font-size: 24px;
     font-weight: bold;
     color: #ffffff;
 }
 
-/* Навигация */
 nav a {
     text-decoration: none;
     color: #ffffff;
@@ -75,7 +47,6 @@ nav a:hover {
     color: #bbbbbb;
 }
 
-/* Контент */
 main {
     max-width: 900px;
     margin: 60px auto;
