@@ -1,111 +1,137 @@
-
-main {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 40px;
+/*Body reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/*Body*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #ffffff;
+  background-color: #111;
+  background-image: url('https://bluescreen.kz/content/images/2024/06/overview__bcphzsdb4fpu_og.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Header*/
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: #2F3234;
-    border-bottom: 1px solid #444;
-    position: sticky;
-    top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #2F3234;
+  border-bottom: 1px solid #444;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 nav a {
-    font-family: Arial, sans-serif;
-    text-decoration: none;
-    color: #ffffff;
-    margin-left: 30px;
-    font-size: 18px;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 30px;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #bbbbbb;
+  color: #bbbbbb;
 }
 
-main h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #ffffff;
+/*Main*/
+main {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
 }
 
-main p {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #dddddd;
+main {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-.product {
-    border-radius: 20px;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
+/*Card*/
+.product-card {
+  background: #1c1c1e;
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
 }
 
-.product img {
-    width: 100%;
-    border-radius: 15px;
-    margin-bottom: 20px;
+.product-card:hover {
+  transform: translateY(-10px);
 }
 
-.product h3 {
-    font-size: 22px;
-    margin: 10px 0;
-    color: #fff;
+.product-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
 }
 
-.product p {
-    font-size: 16px;
-    color: #ccc;
-    margin-bottom: 15px;
+.product-card h3 {
+  font-size: 22px;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 15px;
 }
 
 .price {
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
-    color: #f5a623;
-    margin-bottom: 15px;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #f5a623;
+  margin-bottom: 15px;
 }
 
 .buy-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #f5a623;
-    color: #000;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0071e3;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
+.buy-button:hover {
+  background: #005bb5;
+}
 
+/*Footer*/
 footer {
-    background-color: #2F3234;
-    border-top: 1px solid #444;
-    padding: 0px 60px;
-    text-align: left;
-    color: #bbbbbb;
-    font-size: 12px;
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+  background-color: #2F3234;
+  border-top: 1px solid #444;
+  padding: 20px 60px;
+  text-align: center;
+  color: #bbbbbb;
+  font-size: 14px;
 }
-
