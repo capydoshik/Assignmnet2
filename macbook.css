@@ -132,10 +132,15 @@ main {
 
 /*Footer*/
 footer {
-  background-color: #2F3234;
-  border-top: 1px solid #444;
-  padding: 20px 60px;
-  text-align: center;
-  color: #bbbbbb;
-  font-size: 14px;
+    background-color: #2F3234;
+    border-top: 1px solid #444;
+    padding: 10px 60px;
+    text-align: left;
+    color: #bbbbbb;
+    font-size: 12px;
+
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }

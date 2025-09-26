@@ -140,7 +140,7 @@ footer {
   color: #bbbbbb;
   font-size: 12px;
 
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
