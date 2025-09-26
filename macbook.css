@@ -41,6 +41,11 @@ header {
   color: #ffffff;
 }
 
+.logo a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 nav a {
   text-decoration: none;
   color: #ffffff;
