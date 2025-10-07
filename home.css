@@ -1,151 +1,172 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
+/* General layout */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #ffffff;
-    background-color: #2F3234;
-    background-image: url('https://bluescreen.kz/content/images/2024/06/overview__bcphzsdb4fpu_og.png');
-    background-size: cover;     
-    background-repeat: no-repeat;  
-    background-position: bottom center; 
-    background-attachment: fixed;   
+  background: radial-gradient(circle at top, #0e0f10, #000);
+  color: #f8f9fa;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
 }
 
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background-color: #2F3234;
-    border-bottom: 1px solid #444;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* Navbar */
+.navbar-brand {
+  color: #fff !important;
+  font-weight: 600;
+}
+.nav-link {
+  color: #ccc !important;
+  transition: color 0.3s ease;
+}
+.nav-link:hover {
+  color: #fff !important;
 }
 
-
-.logo {
-    font-family: Arial, sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
+/* Hero */
+.hero {
+  background: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+              url("https://www.apple.com/v/home/an/images/meta/og__e7t8q1y6j6uq_image.png") center/cover no-repeat;
+  padding: 100px 20px;
+}
+.hero h1 {
+  color: #fff;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+.hero p {
+  color: #ddd;
 }
 
-.logo a {
-    text-decoration: none;
-    color: #ffffff;
+/* Carousel */
+.carousel {
+  border-radius: 14px;
+  overflow: hidden;
 }
 
-
-nav a {
-    text-decoration: none;
-    color: #ffffff;
-    margin-left: 30px;
-    font-size: 18px;
-    transition: color 0.3s ease;
+/* Ensure all images fill nicely but stay centered */
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* fills container */
+  object-position: center;    /* keeps subject centered */
+  transition: transform 0.5s ease;
 }
 
-nav a:hover {
-    color: #bbbbbb;
+/* Add smooth zoom on slide change for a premium effect */
+.carousel-item.active .carousel-img {
+  transform: scale(1.03);
 }
 
-
-main {
-    flex: 1; 
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 100px auto;
-    padding: 0 20px;
-    gap: 40px; 
+/* === Carousel Arrow Customization === */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(60%) grayscale(100%); /* Makes arrows grey instead of white */
+  opacity: 0.8;
+  transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
-main h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #ffffff;
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  filter: invert(80%) grayscale(50%);
+  opacity: 1;
 }
 
-main p {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #dddddd;
+/* Product Cards */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+.card-body h5 {
+  font-weight: 600;
 }
 
-.main-text-container {
-    background: rgba(83, 79, 79, 0.6);  
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(5px);
+/* Footer */
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Keep a balanced height ratio on small devices */
+@media (max-width: 768px) {
+  .ratio-16x9 {
+    --bs-aspect-ratio: 60%;   /* slightly taller for phones */
+  }
+}
 
+@media (max-width: 480px) {
+  .ratio-16x9 {
+    --bs-aspect-ratio: 70%;
+  }
+}
+
+/* === Support Page === */
+.support-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* Left text box */
 .support-text-container {
-    flex: 1 1 650px;
-    background: rgba(83, 79, 79, 0.6);  
-    border-radius: 30px;
-    padding: 55px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(5px);
+  flex: 1 1 550px;
+  background: rgba(83, 79, 79, 0.5);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  color: #fff; /* White text */
 }
 
+.support-text-container h1 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.support-text-container p {
+  font-size: 1rem;
+  color: #e5e5e5;
+}
+
+.support-text-container a {
+  color: #61a8ff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.support-text-container a:hover {
+  color: #a7c8ff;
+  text-decoration: underline;
+}
+
+/* Right image */
 .support-image {
-    flex: 1 1 450px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 20px;
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .support-image img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  width: 100%;
+  max-width: 420px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
-
-footer {
-    background-color: #2F3234;
-    border-top: 1px solid #444;
-    padding: 20px 60px;
+/* Responsive layout */
+@media (max-width: 992px) {
+  .support-section {
+    flex-direction: column;
     text-align: center;
-    color: #bbbbbb;
-    font-size: 14px;
-    margin-top: auto; 
+  }
 
+  .support-text-container {
+    order: 1;
+    margin-bottom: 20px;
+  }
 
-}
-    
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; 
-  margin: 0;
-}
-
-main {
-  flex: 1; 
-}
-
-footer {
-  background-color: #000;
-  color: #bbb;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: auto; 
+  .support-image {
+    order: 2;
+  }
 }
